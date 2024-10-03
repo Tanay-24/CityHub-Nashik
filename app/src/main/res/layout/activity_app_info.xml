@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="CityTech Integration Hub"
+            android:textColor="@color/app_name_color"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Version 1.0"
+            android:textColor="@color/app_version_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/app_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="CityTech Integration Hub is an application designed to help users explore and navigate their city with ease. Find the best restaurants, shops, and attractions with our intuitive interface and comprehensive guides."
+            android:textColor="@color/app_description_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/features_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Key Features"
+            android:textColor="@color/features_title_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/features_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="- Explore top attractions\n- Find nearby restaurants\n- Navigate with integrated maps\n- Get personalized recommendations"
+            android:textColor="@color/features_list_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/contact_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Contact Us"
+            android:textColor="@color/contact_title_color"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/contact_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: tanay.puranik2002@gmail.com\nPhone: 8928910668"
+            android:textColor="@color/contact_details_color"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_app_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="NEXT"
+            android:textColor="@color/button_text_color"
+            android:background="@color/button_background_color"/>
+    </LinearLayout>
+</ScrollView>

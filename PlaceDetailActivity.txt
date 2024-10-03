@@ -1,0 +1,163 @@
+package com.example.citymanagement;
+
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlaceDetailActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_place_detail);
+
+        // Get the place details from the intent
+        String placeName = getIntent().getStringExtra("PLACE_NAME");
+        int[] placeImages = getIntent().getIntArrayExtra("PLACE_IMAGES"); // Array of images
+        String placeDescription = getIntent().getStringExtra("PLACE_DESCRIPTION");
+
+        // Initialize views
+        ViewPager2 placeImageViewPager = findViewById(R.id.places_image_viewpager);
+        TextView placeNameTextView = findViewById(R.id.places_name);
+        TextView placeDescriptionTextView = findViewById(R.id.places_description);
+        TextView placeDistanceTextView = findViewById(R.id.places_distance);
+        TextView placeHistoryTextView = findViewById(R.id.places_history);
+        TextView placeAddressTextView = findViewById(R.id.places_address);
+        TextView placePhoneNumberTextView = findViewById(R.id.places_phone_number);
+        TextView placeBusInfoTextView = findViewById(R.id.places_bus_info);
+        TextView placeWebsiteTextView = findViewById(R.id.places_website);
+
+        // Set up ViewPager2 for image sliding
+        List<Integer> imagesList = new ArrayList<>();
+        for (int image : placeImages) {
+            imagesList.add(image);
+        }
+        ImageSliderAdapter imageSliderAdapter = new ImageSliderAdapter(imagesList);
+        placeImageViewPager.setAdapter(imageSliderAdapter);
+
+        // Set the place details
+        placeNameTextView.setText(placeName);
+        placeDescriptionTextView.setText(placeDescription);
+
+        // Example: Set the place distance, history, address, phone number, bus info, and website based on the place name
+        switch (placeName) {
+            case "Harihar":
+                placeDistanceTextView.setText("Distance from Nashik: 20 km");
+                placeHistoryTextView.setText("Harihar is a famous temple dedicated to Lord Shiva...");
+                placeAddressTextView.setText("Harihar Temple, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 123-456-7890");
+                placeBusInfoTextView.setText("Bus: 101, 102, 103");
+                placeWebsiteTextView.setText("https://harihartemple.com");
+                break;
+            case "Pandavleni Caves":
+                placeDistanceTextView.setText("Distance from Nashik: 8 km");
+                placeHistoryTextView.setText("Pandavleni Caves are ancient Buddhist caves...");
+                placeAddressTextView.setText("Pandavleni Caves, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 987-654-3210");
+                placeBusInfoTextView.setText("Bus: 201, 202, 203");
+                placeWebsiteTextView.setText("https://pandavlenicaves.com");
+                break;
+            case "Magnum Multispeciality Hospital Nashik Road":
+                placeDistanceTextView.setText("Distance from Nashik: 6.3 km");
+                placeHistoryTextView.setText("Magnum Hospital is a renowned multispeciality hospital...");
+                placeAddressTextView.setText("Magnum Hospital, Nashik Road, Nashik");
+                placePhoneNumberTextView.setText("Phone: 111-222-3333");
+                placeBusInfoTextView.setText("Bus: 301, 302, 303");
+                placeWebsiteTextView.setText("https://magnumhospital.com");
+                break;
+            case "The Coffee Bean":
+                placeDistanceTextView.setText("Distance from Nashik: 1 km");
+                placeHistoryTextView.setText("The Coffee Bean is a popular coffee shop...");
+                placeAddressTextView.setText("The Coffee Bean, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 123-456-7890");
+                placeBusInfoTextView.setText("Bus: 101");
+                placeWebsiteTextView.setText("https://www.coffeebean.com");
+                break;
+
+            case "Barista":
+                placeDistanceTextView.setText("Distance from Nashik: 2 km");
+                placeHistoryTextView.setText("Barista is a popular coffee chain with a wide range of coffee options...");
+                placeAddressTextView.setText("Barista, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 987-654-3210");
+                placeBusInfoTextView.setText("Bus: 102");
+                placeWebsiteTextView.setText("https://www.barista.com");
+                break;
+
+            case "Cafe Central":
+                placeDistanceTextView.setText("Distance from Nashik: 3 km");
+                placeHistoryTextView.setText("Cafe Central is a cozy cafe serving a variety of coffee and snacks...");
+                placeAddressTextView.setText("Cafe Central, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 111-222-3333");
+                placeBusInfoTextView.setText("Bus: 103");
+                placeWebsiteTextView.setText("https://www.cafe-central.com");
+                break;
+
+            case "Coffee World":
+                placeDistanceTextView.setText("Distance from Nashik: 4 km");
+                placeHistoryTextView.setText("Coffee World is a popular coffee shop with a wide range of coffee blends...");
+                placeAddressTextView.setText("Coffee World, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 444-555-6666");
+                placeBusInfoTextView.setText("Bus: 104");
+                placeWebsiteTextView.setText("https://www.coffee-world.com");
+                break;
+
+            case "SIES High School":
+                placeDistanceTextView.setText("Distance from Nashik: 2 km");
+                placeHistoryTextView.setText("SIES High School is one of the oldest and most reputed schools...");
+                placeAddressTextView.setText("SIES High School, Satya Nagar, Nashik");
+                placePhoneNumberTextView.setText("Phone: 987-654-3210");
+                placeBusInfoTextView.setText("Bus: 103");
+                placeWebsiteTextView.setText("https://www.sieshs.in");
+                break;
+
+            case "Kendriya Vidyalaya":
+                placeDistanceTextView.setText("Distance from Nashik: 3 km");
+                placeHistoryTextView.setText("Kendriya Vidyalaya is a central government school...");
+                placeAddressTextView.setText("Kendriya Vidyalaya, CIDCO, Nashik");
+                placePhoneNumberTextView.setText("Phone: 901-234-5678");
+                placeBusInfoTextView.setText("Bus: 202");
+                placeWebsiteTextView.setText("https://www.kv.nic.in");
+                break;
+
+            case "Dr. Annie Besant School":
+                placeDistanceTextView.setText("Distance from Nashik: 1 km");
+                placeHistoryTextView.setText("Dr. Annie Besant School is a co-educational school...");
+                placeAddressTextView.setText("Dr. Annie Besant School, Cumballa Hill, Nashik");
+                placePhoneNumberTextView.setText("Phone: 123-456-7890");
+                placeBusInfoTextView.setText("Bus: 101");
+                placeWebsiteTextView.setText("https://www.dab.edu.in");
+                break;
+
+            case "KTHM College":
+                placeDistanceTextView.setText("Distance from Nashik: 3 km");
+                placeHistoryTextView.setText("KTHM College is a prominent educational institution in Nashik offering various undergraduate and postgraduate courses...");
+                placeAddressTextView.setText("KTHM College, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 555-666-7777");
+                placeBusInfoTextView.setText("Bus: 201, 202");
+                placeWebsiteTextView.setText("https://www.kthmcollege.ac.in");
+                break;
+            case "Nashik City College":
+                placeDistanceTextView.setText("Distance from Nashik: 4 km");
+                placeHistoryTextView.setText("Nashik City College is well-known for its academic excellence and range of courses...");
+                placeAddressTextView.setText("Nashik City College, Nashik, Maharashtra");
+                placePhoneNumberTextView.setText("Phone: 444-555-6666");
+                placeBusInfoTextView.setText("Bus: 301, 302");
+                placeWebsiteTextView.setText("https://www.nashikcitycollege.edu.in");
+                break;
+
+            // Add more cases as needed for additional places
+            default:
+                placeDistanceTextView.setText("Distance: N/A");
+                placeHistoryTextView.setText("History: N/A");
+                placeAddressTextView.setText("Address: N/A");
+                placePhoneNumberTextView.setText("Phone: N/A");
+                placeBusInfoTextView.setText("Bus: N/A");
+                placeWebsiteTextView.setText("Website: N/A");
+                break;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color"> <!-- Light blue background -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- CardView for image slider -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
+            android:background="@color/card_background_color"> <!-- White background for card -->
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/places_image_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- LinearLayout for place name and location icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/places_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/place_name_color" /> <!-- Deep Blue -->
+
+        </LinearLayout>
+
+        <!-- Description TextView -->
+        <TextView
+            android:id="@+id/places_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+        <!-- Distance TextView -->
+        <TextView
+            android:id="@+id/places_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+        <!-- History TextView -->
+        <TextView
+            android:id="@+id/places_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+        <!-- Address TextView -->
+        <TextView
+            android:id="@+id/places_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+        <!-- Phone Number TextView -->
+        <TextView
+            android:id="@+id/places_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+        <!-- TableLayout for Bus Info -->
+        <TableLayout
+            android:id="@+id/bus_info_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:paddingBottom="8dp"
+            android:paddingTop="16dp">
+
+            <TableRow
+                android:background="@color/background_color">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bus Number"
+                    android:textStyle="bold"
+                    android:textColor="@color/contact_details_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Last Stop"
+                    android:textStyle="bold"
+                    android:textColor="@color/contact_details_color"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Frequency"
+                    android:textStyle="bold"
+                    android:textColor="@color/contact_details_color"/>
+            </TableRow>
+
+            <!-- Bus info rows will be added dynamically here -->
+
+        </TableLayout>
+
+        <!-- Website TextView -->
+        <TextView
+            android:id="@+id/places_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:autoLink="web"
+            android:textColor="@color/app_name_color"
+            android:textColorLink="@color/your_link_color" /> <!-- Change to your desired link color -->
+
+        <!-- Move MapView here -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+</ScrollView>

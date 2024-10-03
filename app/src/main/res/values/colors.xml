@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General Background Color -->
+    <color name="background_color">#E3F2FD</color> <!-- Light Blue, very calming -->
+
+    <!-- Logo Background Color -->
+    <color name="logo_background">#FFFFFF</color> <!-- White background for the logo -->
+
+    <!-- General Text Color -->
+    <color name="text_color">#0277BD</color> <!-- Calm Blue for text -->
+
+    <!-- Button Colors -->
+    <color name="button_text_color">#FFFFFF</color> <!-- White text for the button -->
+    <color name="button_background_color">#0277BD</color> <!-- Calm blue background for button -->
+
+    <!-- Spinner Colors -->
+    <color name="spinner_background">#FFFFFF</color> <!-- White -->
+    <color name="spinner_text_color">#0288D1</color> <!-- Deep Blue -->
+
+    <!-- Spinner Drop-down Background Color -->
+    <color name="spinner_drop_down_background">#FFFFFF</color> <!-- White for better contrast -->
+
+    <!-- RecyclerView Background -->
+    <color name="recycler_view_background">#F0F4F8</color> <!-- Very light gray-blue -->
+
+    <!-- Place Details Colors -->
+    <color name="place_name_color">#0288D1</color> <!-- Deep Blue -->
+    <color name="place_category_color">#03A9F4</color> <!-- Lighter Blue -->
+
+    <color name="your_link_color">#FF0000</color> <!-- Example red color -->
+
+</resources>

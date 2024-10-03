@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "27956650944",
+    "project_id": "city-hub-nashik",
+    "storage_bucket": "city-hub-nashik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27956650944:android:7f279020e69a4bd8cede25",
+        "android_client_info": {
+          "package_name": "com.example.citymanagement"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4ORWxTgBOeHWN5n4TppJzyNh-siiLfNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

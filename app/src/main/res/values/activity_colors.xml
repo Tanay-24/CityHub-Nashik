@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Colors for Specific Activity -->
+    <color name="app_name_color">#0D47A1</color> <!-- Deep blue for emphasis -->
+    <color name="app_version_color">#1976D2</color> <!-- Slightly lighter blue -->
+    <color name="app_description_color">#0277BD</color> <!-- Calm blue for body text -->
+    <color name="features_title_color">#0288D1</color> <!-- Attractive and calming blue -->
+    <color name="features_list_color">#01579B</color> <!-- Darker blue for contrast -->
+    <color name="contact_title_color">#0288D1</color> <!-- Matches features title color -->
+    <color name="contact_details_color">#0277BD</color> <!-- Matching text color -->
+
+    <!-- Card Background Color -->
+    <color name="card_background_color">#FFFFFF</color> <!-- White for the card to keep the focus on content -->
+
+    <!-- Background Color for Specific Activity -->
+    <color name="activity_background_color">#F0F4F8</color> <!-- Very light gray-blue for a calming effect -->
+</resources>

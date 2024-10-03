@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">City Management</string>
+    <string name="title_activity_map">activity_map</string>
+</resources>

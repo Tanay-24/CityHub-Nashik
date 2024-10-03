@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color"> <!-- Light blue background -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="16dp"
+        android:background="@color/card_background_color"> <!-- White background for card -->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/places_image_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- LinearLayout for place name and location icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/places_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/place_name_color" /> <!-- Deep Blue -->
+
+        <ImageView
+            android:id="@+id/map_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/location"
+            android:paddingStart="8dp" />
+    </LinearLayout>
+
+    <!-- Description TextView -->
+    <TextView
+        android:id="@+id/places_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="16dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- Distance TextView -->
+    <TextView
+        android:id="@+id/places_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- History TextView -->
+    <TextView
+        android:id="@+id/places_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- Address TextView -->
+    <TextView
+        android:id="@+id/places_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- Phone Number TextView -->
+    <TextView
+        android:id="@+id/places_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- Bus Info TextView -->
+    <TextView
+        android:id="@+id/places_bus_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/text_color" /> <!-- Calm Blue -->
+
+    <!-- Website TextView -->
+    <TextView
+        android:id="@+id/places_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:autoLink="web"
+        android:textColor="@android:color/holo_blue_dark" /> <!-- Calm Blue -->
+
+</LinearLayout>
